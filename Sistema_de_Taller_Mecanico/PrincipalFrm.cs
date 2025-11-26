@@ -37,5 +37,12 @@ namespace Sistema_de_Taller_Mecanico
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            Repuestos_ordenFrm frm = new Repuestos_ordenFrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

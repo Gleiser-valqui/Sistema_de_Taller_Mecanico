@@ -34,6 +34,7 @@
             this.btnClientes = new System.Windows.Forms.ToolStripButton();
             this.btnVehiculos = new System.Windows.Forms.ToolStripButton();
             this.btnMarcas = new System.Windows.Forms.ToolStripButton();
+            this.BtnRepuestos_Orden = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnClientes,
             this.btnVehiculos,
-            this.btnMarcas});
+            this.btnMarcas,
+            this.BtnRepuestos_Orden});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
@@ -84,6 +86,15 @@
             this.btnMarcas.Text = "Marcas";
             this.btnMarcas.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
+            // BtnRepuestos_Orden
+            // 
+            this.BtnRepuestos_Orden.Image = ((System.Drawing.Image)(resources.GetObject("BtnRepuestos_Orden.Image")));
+            this.BtnRepuestos_Orden.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnRepuestos_Orden.Name = "BtnRepuestos_Orden";
+            this.BtnRepuestos_Orden.Size = new System.Drawing.Size(117, 22);
+            this.BtnRepuestos_Orden.Text = "Repuestos_orden";
+            this.BtnRepuestos_Orden.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
             // PrincipalFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,6 +120,7 @@
         private System.Windows.Forms.ToolStripButton btnClientes;
         private System.Windows.Forms.ToolStripButton btnVehiculos;
         private System.Windows.Forms.ToolStripButton btnMarcas;
+        private System.Windows.Forms.ToolStripButton BtnRepuestos_Orden;
     }
 }
 
