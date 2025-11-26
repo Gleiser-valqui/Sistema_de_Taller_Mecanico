@@ -23,5 +23,12 @@ namespace Sistema_de_Taller_Mecanico
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void btnVehiculos_Click(object sender, EventArgs e)
+        {
+            VehiculosFrm frm = new VehiculosFrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

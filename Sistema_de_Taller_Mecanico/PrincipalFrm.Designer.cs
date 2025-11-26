@@ -71,6 +71,7 @@
             this.btnVehiculos.Name = "btnVehiculos";
             this.btnVehiculos.Size = new System.Drawing.Size(77, 22);
             this.btnVehiculos.Text = "Vehiculos";
+            this.btnVehiculos.Click += new System.EventHandler(this.btnVehiculos_Click);
             // 
             // PrincipalFrm
             // 
