@@ -59,11 +59,29 @@
     <Compile Include="EvidenciaFrm.Designer.cs">
       <DependentUpon>EvidenciaFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GarantiaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GarantiaFrm.Designer.cs">
+      <DependentUpon>GarantiaFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarcasFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarcasFrm.Designer.cs">
+      <DependentUpon>MarcasFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mecanico_ordenFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mecanico_ordenFrm.Designer.cs">
       <DependentUpon>Mecanico_ordenFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MecanicosFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MecanicosFrm.Designer.cs">
+      <DependentUpon>MecanicosFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Clientes.cs" />
     <Compile Include="Modelos\Marcas.cs" />
@@ -72,12 +90,6 @@
     <Compile Include="Modelos\Servicio.cs" />
     <Compile Include="Modelos\Servicio_orden.cs" />
     <Compile Include="Modelos\Vehiculo.cs" />
-    <Compile Include="OrdenesFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OrdenesFrm.Designer.cs">
-      <DependentUpon>OrdenesFrm.cs</DependentUpon>
-    </Compile>
     <Compile Include="PrincipalFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,11 +98,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reclamo_GarantiaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reclamo_GarantiaFrm.Designer.cs">
+      <DependentUpon>Reclamo_GarantiaFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RepuestoFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RepuestoFrm.Designer.cs">
       <DependentUpon>RepuestoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repuesto_orden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Repuesto_orden.Designer.cs">
+      <DependentUpon>Repuesto_orden.cs</DependentUpon>
     </Compile>
     <Compile Include="ServiciosFrm.cs">
       <SubType>Form</SubType>
@@ -116,11 +140,17 @@
     <EmbeddedResource Include="EvidenciaFrm.resx">
       <DependentUpon>EvidenciaFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GarantiaFrm.resx">
+      <DependentUpon>GarantiaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarcasFrm.resx">
+      <DependentUpon>MarcasFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MecanicosFrm.resx">
+      <DependentUpon>MecanicosFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mecanico_ordenFrm.resx">
       <DependentUpon>Mecanico_ordenFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OrdenesFrm.resx">
-      <DependentUpon>OrdenesFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrincipalFrm.resx">
       <DependentUpon>PrincipalFrm.cs</DependentUpon>
@@ -134,8 +164,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reclamo_GarantiaFrm.resx">
+      <DependentUpon>Reclamo_GarantiaFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RepuestoFrm.resx">
       <DependentUpon>RepuestoFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repuesto_orden.resx">
+      <DependentUpon>Repuesto_orden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ServiciosFrm.resx">
       <DependentUpon>ServiciosFrm.cs</DependentUpon>

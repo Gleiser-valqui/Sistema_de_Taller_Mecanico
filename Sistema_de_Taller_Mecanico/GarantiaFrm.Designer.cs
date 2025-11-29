@@ -1,6 +1,6 @@
 ﻿namespace Sistema_de_Taller_Mecanico
 {
-    partial class MarcasFrm
+    partial class GarantiaFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,11 +30,17 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtMarca = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtMeses = new System.Windows.Forms.TextBox();
+            this.txtFechaI = new System.Windows.Forms.TextBox();
+            this.txtFechaF = new System.Windows.Forms.TextBox();
+            this.txtCondiciones = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -50,11 +56,17 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.txtCondiciones);
+            this.splitContainer1.Panel1.Controls.Add(this.txtFechaF);
+            this.splitContainer1.Panel1.Controls.Add(this.txtFechaI);
+            this.splitContainer1.Panel1.Controls.Add(this.txtMeses);
+            this.splitContainer1.Panel1.Controls.Add(this.label4);
+            this.splitContainer1.Panel1.Controls.Add(this.label3);
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.btnEliminar);
             this.splitContainer1.Panel1.Controls.Add(this.btnEditar);
             this.splitContainer1.Panel1.Controls.Add(this.btnGuardar);
-            this.splitContainer1.Panel1.Controls.Add(this.txtMarca);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
             // 
@@ -75,62 +87,110 @@
             this.dataGridView1.Size = new System.Drawing.Size(530, 450);
             this.dataGridView1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(47, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Marca";
-            // 
-            // txtMarca
-            // 
-            this.txtMarca.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(39, 144);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(211, 24);
-            this.txtMarca.TabIndex = 1;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(39, 362);
+            this.btnEliminar.Location = new System.Drawing.Point(45, 375);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(211, 37);
-            this.btnEliminar.TabIndex = 14;
+            this.btnEliminar.Size = new System.Drawing.Size(173, 37);
+            this.btnEliminar.TabIndex = 11;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(39, 296);
+            this.btnEditar.Location = new System.Drawing.Point(143, 330);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(211, 39);
-            this.btnEditar.TabIndex = 13;
+            this.btnEditar.Size = new System.Drawing.Size(106, 39);
+            this.btnEditar.TabIndex = 10;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(39, 238);
+            this.btnGuardar.Location = new System.Drawing.Point(22, 331);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(211, 38);
-            this.btnGuardar.TabIndex = 12;
+            this.btnGuardar.Size = new System.Drawing.Size(115, 38);
+            this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             // 
-            // MarcasFrm
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Meses";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Fecha de Inicio";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(22, 169);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Fecha de Fin";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 216);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Condiciones";
+            // 
+            // txtMeses
+            // 
+            this.txtMeses.Location = new System.Drawing.Point(24, 83);
+            this.txtMeses.Name = "txtMeses";
+            this.txtMeses.Size = new System.Drawing.Size(225, 20);
+            this.txtMeses.TabIndex = 16;
+            // 
+            // txtFechaI
+            // 
+            this.txtFechaI.Location = new System.Drawing.Point(25, 146);
+            this.txtFechaI.Name = "txtFechaI";
+            this.txtFechaI.Size = new System.Drawing.Size(224, 20);
+            this.txtFechaI.TabIndex = 17;
+            this.txtFechaI.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // txtFechaF
+            // 
+            this.txtFechaF.Location = new System.Drawing.Point(25, 186);
+            this.txtFechaF.Name = "txtFechaF";
+            this.txtFechaF.Size = new System.Drawing.Size(224, 20);
+            this.txtFechaF.TabIndex = 18;
+            // 
+            // txtCondiciones
+            // 
+            this.txtCondiciones.Location = new System.Drawing.Point(25, 245);
+            this.txtCondiciones.Name = "txtCondiciones";
+            this.txtCondiciones.Size = new System.Drawing.Size(224, 20);
+            this.txtCondiciones.TabIndex = 19;
+            // 
+            // GarantiaFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "MarcasFrm";
-            this.Text = "MarcasFrm";
+            this.Name = "GarantiaFrm";
+            this.Text = "GarantiaFrm";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -145,7 +205,13 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtCondiciones;
+        private System.Windows.Forms.TextBox txtFechaF;
+        private System.Windows.Forms.TextBox txtFechaI;
+        private System.Windows.Forms.TextBox txtMeses;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
