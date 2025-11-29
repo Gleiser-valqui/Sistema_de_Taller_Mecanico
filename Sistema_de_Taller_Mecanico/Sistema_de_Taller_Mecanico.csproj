@@ -90,6 +90,12 @@
     <Compile Include="Modelos\Servicio.cs" />
     <Compile Include="Modelos\Servicio_orden.cs" />
     <Compile Include="Modelos\Vehiculo.cs" />
+    <Compile Include="OrdenesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenesFrm.Designer.cs">
+      <DependentUpon>OrdenesFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrincipalFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mecanico_ordenFrm.resx">
       <DependentUpon>Mecanico_ordenFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenesFrm.resx">
+      <DependentUpon>OrdenesFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrincipalFrm.resx">
       <DependentUpon>PrincipalFrm.cs</DependentUpon>
