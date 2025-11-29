@@ -16,5 +16,10 @@ namespace Sistema_de_Taller_Mecanico
         {
             InitializeComponent();
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
