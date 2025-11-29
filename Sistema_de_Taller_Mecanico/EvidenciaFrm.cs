@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Sistema_de_Taller_Mecanico
 {
-    public partial class MecanicosFrm : Form
+    public partial class EvidenciaFrm : Form
     {
-        public MecanicosFrm()
+        public EvidenciaFrm()
         {
             InitializeComponent();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -53,6 +53,18 @@
       <DependentUpon>ClientesFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="EvidenciaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvidenciaFrm.Designer.cs">
+      <DependentUpon>EvidenciaFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mecanico_ordenFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mecanico_ordenFrm.Designer.cs">
+      <DependentUpon>Mecanico_ordenFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelos\Clientes.cs" />
     <Compile Include="Modelos\Marcas.cs" />
     <Compile Include="Modelos\Ordene.cs" />
@@ -100,6 +112,12 @@
     </Compile>
     <EmbeddedResource Include="ClientesFrm.resx">
       <DependentUpon>ClientesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvidenciaFrm.resx">
+      <DependentUpon>EvidenciaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mecanico_ordenFrm.resx">
+      <DependentUpon>Mecanico_ordenFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrdenesFrm.resx">
       <DependentUpon>OrdenesFrm.cs</DependentUpon>
