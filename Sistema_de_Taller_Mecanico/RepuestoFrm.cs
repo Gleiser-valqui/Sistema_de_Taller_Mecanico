@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sistema_de_Taller_Mecanico
 {
-    public partial class RepiuestosFrm : Form
+    public partial class RepuestosFrm : Form
     {
-        public RepiuestosFrm()
+        public RepuestosFrm()
         {
             InitializeComponent();
         }
