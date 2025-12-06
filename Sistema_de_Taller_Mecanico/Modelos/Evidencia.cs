@@ -102,9 +102,6 @@ namespace Sistema_de_Taller_Mecanico.Modelos
                 cnn.Desconectar();
             }
         }
-<<<<<<< HEAD
-       
-=======
->>>>>>> acafe7e54d8e594262e52b4e7eb2c7ba0c146f6e
+
     }
 }

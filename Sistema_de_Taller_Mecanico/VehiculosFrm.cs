@@ -109,8 +109,8 @@ namespace Sistema_de_Taller_Mecanico
             string fecha_registro = dateTimePicker1.Value.ToString("yyyy-MM-dd");
             //string id_cliente = txtCliente.Text;
             int id_cliente = Convert.ToInt32(cbClientes.SelectedValue);
-
-            string marca_id = txtMarca.Text;
+            string marca_id = "";
+            //string marca_id = txtMarca.Text;
             bool resultado = false;
             if (vehiculo_id == 0)
                 resultado = Vehiculo.Crear(placa, modelo, anio, tipo_motor, kilometraje, fecha_registro, id_cliente, marca_id);
@@ -137,8 +137,8 @@ namespace Sistema_de_Taller_Mecanico
             groupBox1.Enabled = true;
             txtkm.Text = "";
             dateTimePicker1.Value = DateTime.Now;
-            txtCliente.Text = "";
-            txtMarca.Text = "";
+            //txtCliente.Text = "";
+            //txtMarca.Text = "";
             vehiculo_id = 0;
             txtPlaca.Focus();
         }
@@ -154,8 +154,8 @@ namespace Sistema_de_Taller_Mecanico
             
             txtkm.Text = dataGridView1.CurrentRow.Cells["kilometraje"].Value.ToString();
             dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["fecha_registro"].Value.ToString());
-            txtCliente.Text = dataGridView1.CurrentRow.Cells["id_cliente"].Value.ToString();
-            txtMarca.Text = dataGridView1.CurrentRow.Cells["marca_id"].Value.ToString();
+            //txtCliente.Text = dataGridView1.CurrentRow.Cells["id_cliente"].Value.ToString();
+            //txtMarca.Text = dataGridView1.CurrentRow.Cells["marca_id"].Value.ToString();
             vehiculo_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
         }
 
