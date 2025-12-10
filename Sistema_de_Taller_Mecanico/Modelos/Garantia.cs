@@ -17,7 +17,7 @@ namespace Sistema_de_Taller_Mecanico.Modelos
             try
             {
                 cnn.Conectar();
-                String consulta = "SELECT * FROM garantias  order by id desc";
+                String consulta = "select g.*,o.numero_orden from garantias g inner join ordenes o on g.id_orden = o.id  order by id desc";
                 SqlCommand comando = new SqlCommand(consulta, cnn.ObtenerConexion());
                 SqlDataAdapter adaptador = new SqlDataAdapter(comando);
                 DataTable dt = new DataTable();
@@ -34,7 +34,7 @@ namespace Sistema_de_Taller_Mecanico.Modelos
                 cnn.Desconectar();
             }
         }
-        public static bool Crear(string meses, string condiciones, string fecha_inicio, string fecha_fin, string id_orden)
+        public static bool Crear(string meses, string condiciones, string fecha_inicio, string fecha_fin, int id_orden)
         {
             Conexion cnn = new Conexion();
             try

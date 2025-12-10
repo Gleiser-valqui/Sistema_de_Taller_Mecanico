@@ -24,37 +24,47 @@ namespace Sistema_de_Taller_Mecanico
         private void Servicio_ordenFrm_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Servicio_orden.Obtener();
+            comboBox1.DataSource = Ordene.Obtener();
+            comboBox2.DataSource = Servicio.Obtener();
+            comboBox1.DisplayMember = "numero_orden";
+            comboBox1.ValueMember = "id";
+            comboBox2.DisplayMember = "nombre";
+            comboBox2.ValueMember = "id";
             if (dataGridView1.Columns.Count > 0)
             {
                 dataGridView1.Columns["id"].Visible = false;
+                dataGridView1.Columns["id_orden"].Visible = false;
+                dataGridView1.Columns["id_servicio"].Visible = false;
 
             }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string Descripcion = txtDescripcion.Text;
-            string Precioacordado = txtPrecioAcor.Text;
-            string Tiempoestimado = txtTiempoEst.Text;
-            string Tiemporeal = txtTiempoReal.Text;
-            string Estadodelservicio = txtEstadoServ.Text;
-            string Orden = txtOrden.Text;
-            string Servicio = txtServicio.Text;
+            string descripcion = txtDescripcion.Text;
+            string precio_acordado = txtPrecioAcor.Text;
+            string tiempo_estimado = txtTiempoEst.Text;
+            string tiempo_real_min = txtTiempoReal.Text;
+            string estado_servicio = txtEstadoServ.Text;
+            int id_orden = Convert.ToInt32(comboBox1.SelectedValue);
+            int id_servicio = Convert.ToInt32(comboBox2.SelectedValue);
             bool resultado = false;
+
             if (servicio_id == 0)
             {
-                resultado = Servicio_orden.Crear (Descripcion, Precioacordado, Tiempoestimado, Tiemporeal, Estadodelservicio, Orden, Servicio);
+                resultado = Servicio_orden.Crear(descripcion, precio_acordado, tiempo_estimado, tiempo_real_min, estado_servicio, id_orden, id_servicio);
             }
             if (resultado)
             {
-                MessageBox.Show("Cliente guardado exitosamente.");
+                MessageBox.Show("Servicio orden guardado exitosamente.");
                 dataGridView1.DataSource = Servicio_orden.Obtener();
+                limpiarCampos();
             }
             else
             {
-                MessageBox.Show("Error al guardar el cliente.");
+                MessageBox.Show("Error al guardar el Servicio orden.");
             }
-            dataGridView1.DataSource = Servicio_orden.Obtener();
+            dataGridView1.DataSource = Modelos.Servicio_orden.Obtener();
             limpiarCampos();
         }
         private void limpiarCampos()
@@ -64,19 +74,19 @@ namespace Sistema_de_Taller_Mecanico
             txtTiempoEst.Text = "";
             txtTiempoReal.Text = "";
             txtEstadoServ.Text = "";
-            txtOrden.Text = "";
-            txtServicio.Text = "";
+
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            txtDescripcion.Text = dataGridView1.CurrentRow.Cells["Descripcion"].Value.ToString();
-            txtPrecioAcor.Text = dataGridView1.CurrentRow.Cells["Precio Acordado"].Value.ToString();
-            txtTiempoEst.Text = dataGridView1.CurrentRow.Cells["Tiempo estimado"].Value.ToString();
-            txtTiempoReal.Text = dataGridView1.CurrentRow.Cells["Tiempo real en minutos"].Value.ToString();
-            txtEstadoServ.Text = dataGridView1.CurrentRow.Cells["Estado del servicio"].Value.ToString();
-            txtOrden.Text = dataGridView1.CurrentRow.Cells["Orden"].Value.ToString();
-            txtServicio.Text = dataGridView1.CurrentRow.Cells["Servicio"].Value.ToString();
-            servicio_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value.ToString());
+           txtPrecioAcor.Text = dataGridView1.CurrentRow.Cells["precio_acordado"].Value.ToString();
+            txtDescripcion.Text = dataGridView1.CurrentRow.Cells["descripcion"].Value.ToString();
+            txtTiempoEst.Text = dataGridView1.CurrentRow.Cells["tiempo_estimado"].Value.ToString();
+            txtTiempoReal.Text = dataGridView1.CurrentRow.Cells["tiempo_real_min"].Value.ToString();
+            txtEstadoServ.Text = dataGridView1.CurrentRow.Cells["estado_servicio"].Value.ToString();
+            comboBox1.SelectedValue = dataGridView1.CurrentRow.Cells["id_orden"].Value.ToString();
+            comboBox2.SelectedValue = dataGridView1.CurrentRow.Cells["id_servicio"].Value.ToString();
+            servicio_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
+
 
         }
 

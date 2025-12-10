@@ -27,6 +27,7 @@ namespace Sistema_de_Taller_Mecanico.Modelos
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString());
                 return null;
             }
             finally
@@ -53,6 +54,7 @@ namespace Sistema_de_Taller_Mecanico.Modelos
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString());
                 return null;
             }
             finally

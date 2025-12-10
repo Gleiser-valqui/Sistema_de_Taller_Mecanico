@@ -32,9 +32,13 @@ namespace Sistema_de_Taller_Mecanico
         private void GarantiaFrm_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Garantia.Obtener();
+            comboBox1.DataSource = Ordene.Obtener();
+            comboBox1.DisplayMember = "numero_orden";
+            comboBox1.ValueMember = "id";
             if (dataGridView1.Columns.Count > 0)
             {
                 dataGridView1.Columns["id"].Visible = false;
+                dataGridView1.Columns["id_orden"].Visible = false;
             }
         }
 
@@ -42,9 +46,9 @@ namespace Sistema_de_Taller_Mecanico
         {
             string meses = txtMeses.Text;
             string condiciones = txtCondiciones.Text;
-            string fecha_inicio = txtFechaI.Text;
-            string fecha_fin = txtFechaF.Text;
-            string id_orden = txtOrden.Text;
+            string fecha_inicio = dtFechaInicio.Value.ToString("yyyy-MM-dd");
+            string fecha_fin = dateTimePicker2.Value.ToString("yyyy-MM-dd");
+            int id_orden = Convert.ToInt32(comboBox1.SelectedValue);
             bool resultado = false;
             if (garantia_id == 0)
             {
@@ -66,9 +70,8 @@ namespace Sistema_de_Taller_Mecanico
         {
             txtMeses.Text = "";
             txtCondiciones.Text = "";
-            txtFechaI.Text = "";
-            txtFechaF.Text = "";
-            txtOrden.Text = "";
+            dtFechaInicio.Value = DateTime.Now;
+            dateTimePicker2.Value = DateTime.Now;
             garantia_id = 0;
             txtMeses.Focus();
         }
@@ -77,9 +80,10 @@ namespace Sistema_de_Taller_Mecanico
         {
             txtMeses.Text = dataGridView1.CurrentRow.Cells["meses"].Value.ToString();
             txtCondiciones.Text = dataGridView1.CurrentRow.Cells["condiciones"].Value.ToString();
-            txtFechaI.Text = dataGridView1.CurrentRow.Cells["fecha_inicio"].Value.ToString();
-            txtFechaF.Text = dataGridView1.CurrentRow.Cells["fecha_fin"].Value.ToString();
-            txtOrden.Text = dataGridView1.CurrentRow.Cells["id_orden"].Value.ToString();
+            dtFechaInicio.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["fecha_inicio"].Value.ToString());
+            dateTimePicker2.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["fecha_fin"].Value.ToString());
+            comboBox1.SelectedValue = dataGridView1.CurrentRow.Cells["id_orden"].Value.ToString();
+            //txtOrden.Text = dataGridView1.CurrentRow.Cells["id_orden"].Value.ToString();
         }
 
         private  void btnEliminar_Click(object sender, EventArgs e)

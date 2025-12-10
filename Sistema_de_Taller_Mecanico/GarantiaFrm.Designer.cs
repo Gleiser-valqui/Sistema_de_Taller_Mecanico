@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.txtOrden = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCondiciones = new System.Windows.Forms.TextBox();
-            this.txtFechaF = new System.Windows.Forms.TextBox();
-            this.txtFechaI = new System.Windows.Forms.TextBox();
             this.txtMeses = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +40,9 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dtFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -58,11 +58,11 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.txtOrden);
+            this.splitContainer1.Panel1.Controls.Add(this.dateTimePicker2);
+            this.splitContainer1.Panel1.Controls.Add(this.dtFechaInicio);
+            this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
             this.splitContainer1.Panel1.Controls.Add(this.label5);
             this.splitContainer1.Panel1.Controls.Add(this.txtCondiciones);
-            this.splitContainer1.Panel1.Controls.Add(this.txtFechaF);
-            this.splitContainer1.Panel1.Controls.Add(this.txtFechaI);
             this.splitContainer1.Panel1.Controls.Add(this.txtMeses);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
@@ -78,14 +78,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // txtOrden
-            // 
-            this.txtOrden.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrden.Location = new System.Drawing.Point(25, 290);
-            this.txtOrden.Name = "txtOrden";
-            this.txtOrden.Size = new System.Drawing.Size(143, 24);
-            this.txtOrden.TabIndex = 30;
             // 
             // label5
             // 
@@ -104,23 +96,6 @@
             this.txtCondiciones.Name = "txtCondiciones";
             this.txtCondiciones.Size = new System.Drawing.Size(224, 24);
             this.txtCondiciones.TabIndex = 19;
-            // 
-            // txtFechaF
-            // 
-            this.txtFechaF.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFechaF.Location = new System.Drawing.Point(25, 186);
-            this.txtFechaF.Name = "txtFechaF";
-            this.txtFechaF.Size = new System.Drawing.Size(224, 24);
-            this.txtFechaF.TabIndex = 18;
-            // 
-            // txtFechaI
-            // 
-            this.txtFechaI.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFechaI.Location = new System.Drawing.Point(25, 146);
-            this.txtFechaI.Name = "txtFechaI";
-            this.txtFechaI.Size = new System.Drawing.Size(224, 24);
-            this.txtFechaI.TabIndex = 17;
-            this.txtFechaI.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtMeses
             // 
@@ -208,13 +183,40 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(530, 450);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(25, 293);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(224, 21);
+            this.comboBox1.TabIndex = 30;
+            // 
+            // dtFechaInicio
+            // 
+            this.dtFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaInicio.Location = new System.Drawing.Point(22, 135);
+            this.dtFechaInicio.Name = "dtFechaInicio";
+            this.dtFechaInicio.Size = new System.Drawing.Size(186, 20);
+            this.dtFechaInicio.TabIndex = 31;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(24, 189);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(184, 20);
+            this.dateTimePicker2.TabIndex = 32;
             // 
             // GarantiaFrm
             // 
@@ -240,8 +242,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtCondiciones;
-        private System.Windows.Forms.TextBox txtFechaF;
-        private System.Windows.Forms.TextBox txtFechaI;
         private System.Windows.Forms.TextBox txtMeses;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -250,7 +250,9 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtOrden;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtFechaInicio;
     }
 }
